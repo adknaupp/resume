@@ -1,20 +1,108 @@
 \documentclass{article}
 
 \usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{enumitem}
 
-\titleformat{\section}
-{\normalfont\Large\bfseries}
-{}
-{1em}
-{}[\titlerule]
+\renewcommand{\maketitle}{
+\begin{center}
+  {\huge\bfseries\theauthor}
+  \vspace{.25em}
+  \par (971) 724-8955 $\cdot$ adknaupp@gmail.com $\cdot$ linkedin.com/in/ammon-knaupp/
+\end{center}
+}
 
-\author{Ammon Knaupp}
-\title{Resume}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
 
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+
+\newcommand{\role}[1]{
+    \vspace{-\baselineskip}
+    \vspace{8pt}
+    #1
+}
+
+\newlist{blacksquareitemize}{itemize}{1}
+\setlist[blacksquareitemize]{
+  label={\tiny$\blacksquare$},
+  leftmargin=*,
+  itemsep=1pt,
+  before=\vspace{-\baselineskip}\vspace{8pt},
+}
+
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 \begin{document}
+
+\title{R\'esum\'e}
+\author{Ammon Knaupp}
+
 \maketitle
 
 \section{Education}
+
+\subsection{Brigham Young University}
+\role{Bioinformatics, B.S. \hfill Aug 2023}
+\begin{blacksquareitemize}
+    \item Minor in German
+    \item Coursework in Genetics and Genomics
+\end{blacksquareitemize}
+
+\section{Projects}
+
+\subsection{Create App for Access Control and Storage of Customer Data}
+\role{Software engineering}
+\begin{blacksquareitemize}
+    \item Created new application employing APIs from Globus and PacBio for integration into existing website.
+    \item Designed and authored specification for app architecture, frontend UI, and backend.
+    \item Defined and automated workflows for and storage of data generated in lab.
+\end{blacksquareitemize}
+
+\subsection{Create DNA Sequence Data Pipeline}
+\role{Bioinformatics Engineering}
+\begin{blacksquareitemize}
+    \item Collaborated with colleagues to develop bioinformatics pipeline for execution in HPC environments.
+    \item Evaluated bioinformatics tools for each task in pipeline (data acquisition, processing, genome assembly).
+    \item Optimized compute resource allocation for each step in pipeline for fast and efficient execution.
+\end{blacksquareitemize}
+
+\section{Experience}
+
+\subsection{BYU DNA Sequencing Center}
+\role{Lab Technician \hfill Sept 2020-Present}
+\begin{blacksquareitemize}\itemsep1pt
+    \item Defined and automated data management workflows, reducing latency and cutting task duration by 95\%.
+    \item Researched technologies and techniques for ad-hoc solutions or permanent integration into lab processes.
+    \item Assisted with and trained students on tasks from every stage of wet lab workflow.
+\end{blacksquareitemize}
+
+\subsection{BYU Department of Chemistry}
+\role{Research Assistant \hfill Feb-Sep 2020}
+\begin{blacksquareitemize}\itemsep1pt
+    \item Developed program to automate computational chemistry workflow.
+    \item Ran molecular dynamics simulations in HPC environment.
+    \item Wrote quarterly proposal/progress report to qualify my project for undergraduate research award funds.
+\end{blacksquareitemize}
+
+\subsection{Business Credentialing Services}
+\role{International Compliance Analyst \hfill Apr 2019-Feb 2020}
+\begin{blacksquareitemize}\itemsep1pt
+    \item Communicated effectively in spoken and written Dutch and German.
+    \item Localized vendor registration portal for Dutch and German speaking countries.
+    \item Assisted European vendors with registration and compliance checking.
+\end{blacksquareitemize}
+
+\section{Skills/Achievements}
+
+\begin{blacksquareitemize}
+    \item Dutch Language: Advanced, German Language: CEFR Level B2 certification
+    \item Technical Writing (LaTeX)
+    \item Scripting: Python, Bash and R
+    \item Software Development: Java, Git, Android
+    \item Molecular biology techniques: DNA extraction, PCR, size selection, sequencing (Sanger, PacBio)
+    \item Presented at DNA Basics Learning Center for RootsTech 2021
+\end{blacksquareitemize}
 
 \end{document}
